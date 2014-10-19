@@ -7,6 +7,18 @@ Friday, October 17, 2014
 ---
 
 
+```r
+library(knitr)
+```
+
+```
+## Warning: package 'knitr' was built under R version 3.1.1
+```
+
+```r
+opts_chunk$set(fig.path = "figures/" )
+```
+
 ## Loading and preprocessing the data
 
       - Read the downloaded activity.csv file into a data frame
@@ -30,7 +42,7 @@ Friday, October 17, 2014
     hist(grouped.data$x, breaks = nrow(grouped.data), main = "Histogram of steps taken everyday", xlab = "Total steps per day")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-2-1.png) 
+![](figures/unnamed-chunk-2-1.png) 
 
 
 
@@ -73,7 +85,7 @@ Friday, October 17, 2014
     plot(timed.data$interval, timed.data$x, type="l", main = "Average steps taken at every interval across all days", xlab="5-minute timeline starting 12 am (1500 - 3 pm)", ylab="Average steps taken")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![](figures/unnamed-chunk-6-1.png) 
 
 #### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -139,7 +151,7 @@ The new dataset with filled missing data is filled.data. Here is its summary:
     hist(grouped.filled.data$x, breaks = nrow(grouped.filled.data), main = "Histogram of steps taken everyday (with filled data)", xlab = "Total steps per day")
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![](figures/unnamed-chunk-11-1.png) 
 
 #### Calculate the mean and median total steps per day (after filling missing values)
 
@@ -196,7 +208,7 @@ Mean is the same, but median is now equal to the mean. Which means data is now r
    title(main = "Timeline of average steps taken at each interval on weekdays vs weekends", xlab="5-minute timeline starting 12 am (1500 - 3 pm)", ylab="Average steps taken", outer=TRUE)
 ```
 
-![](./PA1_template_files/figure-html/unnamed-chunk-16-1.png) 
+![](figures/unnamed-chunk-16-1.png) 
 
 
 
